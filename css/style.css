@@ -1,7 +1,3 @@
-:root {
-    --light-blue: #2998FF
-}
-
-.hero {
-    background-color: (var(--light-blue));
+body {
+    background-color: aliceblue;
 }
