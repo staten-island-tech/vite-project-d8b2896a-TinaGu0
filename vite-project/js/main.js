@@ -1,4 +1,7 @@
-import "../styles/style.css";
+import "../styles/color.css";
 
+
+
+const hello = "hello"
 console.log(hello);
 
