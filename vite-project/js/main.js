@@ -1,4 +1,4 @@
-import "/styles/color.css";
+import "../styles/color.css";
 
 
 

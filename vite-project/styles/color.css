@@ -1,3 +1,32 @@
 body {
   background-color: rgb(58, 87, 112);
 }
+
+.parent {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.card {
+  height: auto;
+  width: 21vw;
+  background-color: #fff2e6;
+  border-radius: 25px;
+  justify-content: space-between;
+  text-align: center;
+  display: flexbox;
+  box-shadow: 0 10px 10px #ff8080 ;
+  transition: all 1s;
+  animation: ani5 5s;
+  animation-play-state: paused;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  animation-play-state: running;
+} 
+
+.center {
+  text-align: center;
+}
