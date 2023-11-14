@@ -103,7 +103,4 @@ const genshinCharacters = [
     },
 ];
 
-
-
-
-`export {x,x,x};`
+export {genshinCharacters};

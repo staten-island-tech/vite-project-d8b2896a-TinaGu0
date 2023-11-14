@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(58, 87, 112);
+  background-color: rgb(236, 226, 215);
 }
 
 .parent {
@@ -8,18 +8,15 @@ body {
   flex-flow: row wrap;
 }
 
-.card {
+.profile {
   height: auto;
-  width: 21vw;
+  width: 30%;
   background-color: #fff2e6;
   border-radius: 25px;
   justify-content: space-between;
   text-align: center;
   display: flexbox;
-  box-shadow: 0 10px 10px #ff8080 ;
-  transition: all 1s;
-  animation: ani5 5s;
-  animation-play-state: paused;
+  box-shadow: 0 10px 10px #f1f1da ;
 }
 
 .card:hover {
