@@ -1,6 +1,3 @@
-body {
-  background-color: rgb(236, 226, 215);
-}
 
 .parent {
   display: flex;
@@ -11,7 +8,6 @@ body {
 .profile {
   height: auto;
   width: 30%;
-  background-color: #fff2e6;
   border-radius: 25px;
   justify-content: space-between;
   text-align: center;
@@ -26,4 +22,32 @@ body {
 
 .center {
   text-align: center;
+}
+
+:root {
+  --white: #FFFF;
+  --light-yellow: #fff2e6;
+  --red: #911;
+  --yellow: #992;
+  
+  --primary: var(--light-yellow);
+  --secondary: var(--white);
+}
+
+.normal-mode {
+  --primary: var(--light-yellow);
+  --secondary: var(--white);
+}
+
+.pain-mode {
+  --primary: var(--red);
+  --secondary: var(--yellow);
+}
+
+.bgColor {
+  background-color: var(--primary);
+}
+
+.div {
+  background-color: var(--secondary);
 }

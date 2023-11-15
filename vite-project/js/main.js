@@ -11,19 +11,26 @@ const regions = {
 }
 
 regions.mond.addEventListener("click", function(event) {
-    
+    event.preventDefault();
+
 });
 
 
 
 let charaname = genshinCharacters.name
 charas.insertAdjacentHTML("beforeend", 
-`<div class="profile">
+`
+<div>
+<div class="profile">
 <h2>${charaname}</h2>
-</div>`
+</div>
+</div>
+`
 );
 
-
+document.querySelector(".switchTheme").addEventListener("click", function() {
+    document.body.classList.add("pain");
+});
 
 
 
