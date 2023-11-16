@@ -1,8 +1,12 @@
+body {
+  background-color: var(--primary);
+}
 
 .parent {
   display: flex;
   width: 100%;
   flex-flow: row wrap;
+  padding-top: 5%;
 }
 
 .profile {
@@ -12,6 +16,7 @@
   justify-content: space-between;
   text-align: center;
   display: flexbox;
+  background-color: var(--secondary);
   box-shadow: 0 10px 10px #f1f1da ;
 }
 
@@ -25,10 +30,10 @@
 }
 
 :root {
-  --white: #FFFF;
-  --light-yellow: #fff2e6;
-  --red: #911;
-  --yellow: #992;
+  --white: #cdcfcd;
+  --light-yellow: #645977;
+  --red: rgb(255, 1, 221);
+  --yellow: #eee600;
   
   --primary: var(--light-yellow);
   --secondary: var(--white);
