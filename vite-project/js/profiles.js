@@ -1,8 +1,10 @@
 import { genshinCharacters } from "./chara";
 
-let charaName = genshinCharacters.name
-let charaRegion = genshinCharacters.region
-charas.insertAdjacentHTML("beforeend", 
+
+genshinCharacters.forEach((chara => {
+    
+
+    charas.insertAdjacentHTML("beforeend", 
 `
 <div class="parent">
 <div class="profile">
@@ -12,3 +14,5 @@ charas.insertAdjacentHTML("beforeend",
 </>
 `
 );
+
+}));
