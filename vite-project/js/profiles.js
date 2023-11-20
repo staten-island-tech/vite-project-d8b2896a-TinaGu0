@@ -1,18 +1,20 @@
 import { genshinCharacters } from "./chara";
 
+const DOMSelectors = {
+    charas: document.getElementById("charas")
+};
 
-genshinCharacters.forEach((chara => {
+allChara()
+
+function allChara() {
+    let names = genshinCharacters.forEach((genshinCharacters) => console.log(genshinCharacters.name));
+    DOMSelectors.charas.insertAdjacentHTML("beforeend", 
+    `
+    <div class="profile">
+        <h2>${names}</h2>    
+    </div>
+    `
     
+    )
+};
 
-    charas.insertAdjacentHTML("beforeend", 
-`
-<div class="parent">
-<div class="profile">
-<h2>${charaName}</h2>
-<h3>${charaRegion}</h3>
-</div>
-</>
-`
-);
-
-}));
