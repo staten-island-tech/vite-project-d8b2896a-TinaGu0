@@ -3,7 +3,7 @@ import "./filters/";
 import "./profiles/";
 
 
-document.querySelector(".switchTheme").addEventListener("click", function() {
+document.querySelector("#switchTheme").addEventListener("click", function() {
     if (document.body.classList.contains("normal-mode")) {
         document.body.classList.add("pain-mode");
         document.body.classList.remove("normal-mode");
