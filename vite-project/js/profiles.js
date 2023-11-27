@@ -10,7 +10,8 @@ const DOMSelectors = {
 };
 
 //all charas
-genshinCharacters.forEach((genshinCharacters) => DOMSelectors.charas.insertAdjacentHTML("beforeend", 
+function charas(arr) {
+    genshinCharacters.forEach((genshinCharacters) => DOMSelectors.charas.insertAdjacentHTML("beforeend", 
 `
     <div class="profile">
         <h2>${genshinCharacters.name}</h2>    
@@ -21,22 +22,28 @@ genshinCharacters.forEach((genshinCharacters) => DOMSelectors.charas.insertAdjac
 `
 
 ));
+};
 
-//mond only 
+
+charas(genshinCharacters);
+
+`
 document.querySelector("#mond").addEventListener("click", function() {
-genshinFilters.mondstadt.forEach((genshinFilters) => DOMSelectors.regMond.insertAdjacentHTML("beforeend", 
-    `
-        <div class="profile">
-            <h2>${genshinFilters.mondstadt.name}</h2>    
-            <h3>${genshinFilters.mondstadt.region}</h3>
-            <h3>${genshinFilters.mondstadt.vision}</h3>
-            <h3>${genshinFilters.mondstadt.height}</h3>
-        </div>
-    `
-    
-    ));
 
-    document.body.idList.add("#regMond");
-        document.body.idList.remove("#charas");
+    charas(genshinFilters.mondstadt)
 });
 
+`
+
+function clearfields() {
+    charas()
+};
+
+let buttons = document.querySelectorAll('button')
+
+buttons.forEach((btn)=> btn.addEventListener("click", function(){
+    let arrays = btn.textContent.toLowerCase()
+    let newArr = genshinCharacters.filter((genshinCharacters)=>genshinCharacters.region === arrays)
+    clearfields();
+    charas(newArr);
+}));
