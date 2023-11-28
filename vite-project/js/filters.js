@@ -9,7 +9,5 @@ const genshinFilters = {
     sumeru: genshinCharacters.filter(genshinCharacters => genshinCharacters.region.includes("Sumeru")),
 };
 
-console.log(genshinFilters.mondstadt);
-
 
 export {genshinFilters};

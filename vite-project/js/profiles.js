@@ -1,17 +1,13 @@
 import { genshinCharacters } from "./chara";
-import { genshinFilters } from "./filters";
+`import { genshinFilters } from "./filters";` //part of old code
 
 const DOMSelectors = {
     charas: document.getElementById("charas"),
-    regMond: document.getElementById("charas"),
-    regLiyue: document.getElementById("charas"),
-    regInazuma: document.getElementById("charas"),
-    regSumeru: document.getElementById("charas"),
+    buttons: document.querySelectorAll('button'),
 };
 
-//all charas
 function charas(arr) {
-    genshinCharacters.forEach((genshinCharacters) => DOMSelectors.charas.insertAdjacentHTML("beforeend", 
+    arr.forEach((genshinCharacters) => DOMSelectors.charas.insertAdjacentHTML("beforeend", 
 `
     <div class="profile">
         <h2>${genshinCharacters.name}</h2>    
@@ -21,29 +17,42 @@ function charas(arr) {
     </div>
 `
 
-));
-};
-
+))};
 
 charas(genshinCharacters);
 
-`
-document.querySelector("#mond").addEventListener("click", function() {
-
-    charas(genshinFilters.mondstadt)
-});
-
-`
-
-function clearfields() {
-    charas()
+function remove() {
+    const div = document.querySelectorAll(".profile");
+    div.forEach((bye)=> bye.remove());
 };
 
-let buttons = document.querySelectorAll('button')
 
-buttons.forEach((btn)=> btn.addEventListener("click", function(){
-    let arrays = btn.textContent.toLowerCase()
+DOMSelectors.buttons.forEach((btn)=> btn.addEventListener("click", function(){
+    let arrays = btn.textContent
     let newArr = genshinCharacters.filter((genshinCharacters)=>genshinCharacters.region === arrays)
-    clearfields();
+    remove();
     charas(newArr);
 }));
+
+//old inefficient code :(
+`
+document.querySelector("#mond").addEventListener("click", function() {
+    remove();
+    charas(genshinFilters.mondstadt);
+});
+
+document.querySelector("#liyue").addEventListener("click", function() {
+    remove();
+    charas(genshinFilters.liyue);
+});
+
+document.querySelector("#inazuma").addEventListener("click", function() {
+    remove();
+    charas(genshinFilters.inazuma);
+});
+
+document.querySelector("#sumeru").addEventListener("click", function() {
+    remove();
+    charas(genshinFilters.sumeru);
+});
+`
