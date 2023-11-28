@@ -13,6 +13,7 @@ function charas(arr) {
         <h2>${genshinCharacters.name}</h2>    
         <h3>${genshinCharacters.region}</h3>
         <h3>${genshinCharacters.vision}</h3>
+        <img src="${genshinCharacters.img}" />
         <h3>${genshinCharacters.height}</h3>
     </div>
 `
