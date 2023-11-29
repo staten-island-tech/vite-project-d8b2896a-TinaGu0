@@ -12,7 +12,6 @@ body {
 .profile {
   height: auto;
   width: 20%;
-  border-radius: 25px;
   justify-content: space-between;
   text-align: center;
   display: flexbox;
@@ -47,10 +46,10 @@ body {
 }
 
 :root {
-  --white: #cdcfcd;
+  --white: #d4d4d4;
   --light-yellow: #ece6e3;
   --red: #8d988d;
-  --yellow: 	#ece6e3;
+  --yellow: 	#e2dfc8;
   
   --primary: var(--light-yellow);
   --secondary: var(--white);
